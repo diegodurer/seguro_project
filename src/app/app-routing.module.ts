@@ -10,6 +10,18 @@ const routes: Routes = [
   {
     path: 'folder/:id',
     loadChildren: () => import('./folder/folder.module').then( m => m.FolderPageModule)
+  },
+  {
+    path: 'seguro-list',
+    loadChildren: () => import('./seguro/seguro-list/seguro-list.module').then( m => m.SeguroListPageModule)
+  },
+  {
+    path: 'seguro-edit',
+    loadChildren: () => import('./seguro/seguro-edit/seguro-edit.module').then( m => m.SeguroEditPageModule)
+  },
+  {
+    path: 'seguro-edit/:id',
+    loadChildren: () => import('./seguro/seguro-edit/seguro-edit.module').then( m => m.SeguroEditPageModule)
   }
 ];
 

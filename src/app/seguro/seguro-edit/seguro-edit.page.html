@@ -1,0 +1,47 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>Seguro</ion-title>
+
+    <ion-buttons slot="start">
+      <ion-button (click)="volver()">
+        <ion-icon name="chevron-back-outline"></ion-icon>
+      </ion-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content class="ion-padding">
+  <ion-item>
+    <ion-label position="floating">Código</ion-label>
+    <ion-input type="text" [(ngModel)]="seguro.codigo"></ion-input>
+  </ion-item>
+
+  <ion-item>
+    <ion-label position="floating">Nombre</ion-label>
+    <ion-input type="text" [(ngModel)]="seguro.nombre"></ion-input>
+  </ion-item>
+
+  <ion-item>
+    <ion-label position="floating">Apellido</ion-label>
+    <ion-input type="text" [(ngModel)]="seguro.apellido"></ion-input>
+  </ion-item>
+
+  <ion-item>
+    <ion-label position="floating">Objeto Asegurado</ion-label>
+    <ion-input type="text" [(ngModel)]="seguro.objeto"></ion-input>
+  </ion-item>
+
+  <ion-item>
+    <ion-label position="floating">Monto Asegurado</ion-label>
+    <ion-input type="number" [(ngModel)]="seguro.monto"></ion-input>
+  </ion-item>
+  
+  <ion-item>
+    <ion-label position="floating">Fecha</ion-label>
+    <ion-datetime presentation="date" [(ngModel)]="seguro.fecha"></ion-datetime>
+  </ion-item>
+
+  <ion-button expand="full" (click)="accion(seguro.id)">
+    Guardar
+  </ion-button>
+</ion-content>
